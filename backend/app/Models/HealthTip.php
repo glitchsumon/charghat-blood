@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class HealthTip extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['health_tip_category_id', 'title', 'content', 'image_url', 'is_published'];
+
+    protected function casts(): array
+    {
+        return ['is_published' => 'boolean'];
+    }
+}
